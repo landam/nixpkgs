@@ -93,6 +93,7 @@ stdenv.mkDerivation (finalAttrs: {
   patches = lib.optionals stdenv.isDarwin [
     # Fix conversion of const char* to unsigned int.
     ./clang-integer-conversion.patch
+    ./grass_config_dir.patch
   ];
 
   configureFlags = [
